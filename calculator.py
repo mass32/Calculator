@@ -15,8 +15,9 @@ class CalculatorApp(tk.Tk):
 
         self.connection = sq.connect('history.db')
         self.cursor = self.connection.cursor()
-
         self.cursor.execute('CREATE TABLE IF NOT EXISTS history (execution_time DATETIME, expression TEXT, result REAL)')
+        self.cursor.execute('DELETE FROM history')
+        self.connection.commit()
 
         self.output = tk.StringVar()
         self.expression_str = ''
