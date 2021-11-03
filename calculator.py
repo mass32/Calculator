@@ -76,7 +76,7 @@ class CalculatorApp(tk.Tk):
         self.btn_equals = tk.Button(master=self.frm_buttons, text='=', font=('Calibri', 32), command=self.calculate)
         self.btn_equals.grid(row=2, column=4, rowspan=4, sticky='nesw', padx=2, pady=2)
 
-        self.frm_history = tk.Frame(master=self, bg='purple')
+        self.frm_history = tk.Frame(master=self)
         self.frm_history.rowconfigure(1, weight=1)
         self.frm_history.columnconfigure(1, weight=1)
         self.frm_history.grid(row=1, column=2, rowspan=2, sticky='nesw', padx=2, pady=2)
